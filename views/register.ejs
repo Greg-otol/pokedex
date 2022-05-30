@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/icon.png" />
+    <title>Cadastrar novo Pokemon</title>
+</head>
+
+<body>
+    <%- include("./partials/header.ejs") %>
+    <main id="register">
+        <section id="form">
+            <div class="container">
+                <form class="itens" action="create" method="post">
+                    <h2>Cadastrar Pokemon</h2>
+                    <input id="nome" type="text" name="nome" placeholder="Nome" required />
+                    <input id="imgagem" type="text" name="imagem" placeholder="Link da Imagem" required />
+                    <textarea id="descricao" type="text" name="descricao" cols="30" rows="3" placeholder="Descrição"
+                        required></textarea>
+                    <input id="altura" type="text" name="altura" placeholder="Altura" required />
+                    <input id="peso" type="text" name="peso" placeholder="Peso" required />
+                    <input id="categoria" type="text" name="categoria" placeholder="Categoria" required />
+                    <input id="habilidade" type="text" name="habilidade" placeholder="Habilidade" required />
+                    <input id="tipo" type="text" name="tipo" placeholder="Tipo" required />
+                    <button id="btnCadastrar" >Cadastrar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+    <!-- <script src="/js/showModal.js"></script> -->
+</body>
+
+</html>

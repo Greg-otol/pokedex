@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Detalhes do Pokemon</title>
+  </head>
+
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <main id="details">
+      <div class="pokemon">
+        <img
+          id="img_details"
+          src="<%= pokemon[0].imagem %>"
+          alt="Imagen do pokemon <%=pokemon[0].nome %> "
+        />
+        <div class="dados">
+          <h3>Nº: <%= pokemon[0].id %></h3>
+          <h3>Nome: <%= pokemon[0].nome %></h3>
+          <p id="description">
+            <b>Descrição:</b>
+            <%= pokemon[0].descricao %>
+          </p>
+          <p>
+            <b>Tipo:</b>
+            <%= pokemon[0].tipo %>
+          </p>
+          <p>
+            <b>Altura:</b>
+            <%= pokemon[0].altura %>
+          </p>
+          <p>
+            <b>Peso:</b>
+            <%= pokemon[0].peso %>
+          </p>
+          <p>
+            <b>Categoria:</b>
+            <%= pokemon[0].categoria %>
+          </p>
+          <p>
+            <b>Habilidade:</b>
+            <%= pokemon[0].habilidade %>
+          </p>
+        </div>
+      </div>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
