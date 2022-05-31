@@ -3,10 +3,11 @@
 POKEDEX - Projeto 2 do módulo 2 BlueEdtech
 
 
-Para a correta execução do projeto em IDE, é necessario a instalação das dependenvias localizadas no arquivo "package.json", e também é possivel a visualização do projeto atraves do Heroku onde foi feito o Deploy no link abaixo:
+Para a correta execução do projeto em IDE, é necessário a instalação das dependências localizadas no arquivo "package.json". 
+
+É possível a visualização do projeto através do Heroku onde foi feito o Deploy no link abaixo:
 
 https://pokedex-greg.herokuapp.com/
-
 
 O projeto foi desenvolvido com as tecnologias:
 
