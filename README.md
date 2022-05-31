@@ -35,6 +35,7 @@ HTML (ejs)
 
 </div>
 
+
 ## Contato
 
 <a href="https://www.linkedin.com/in/greg%C3%B3rio-neto-a0119b239/" target="_blank"> <img src="https://img.icons8.com/fluency/144/000000/linkedin.png"/></a>
