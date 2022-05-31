@@ -1,6 +1,5 @@
-const closeModal = document.querySelector("#space-modal");
-const modal = document.querySelector(".modal-container");
+const message = document.querySelector("#message");
 
-closeModal.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+setTimeout(() => {
+  message.style.display = "none";
+}, 5000);

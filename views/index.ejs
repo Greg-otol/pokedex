@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/img/icon.png" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Pokedex</title>
-  </head>
 
-  <body>
-    <%- include("./partials/header.ejs") %>
-    <main>
-      <section class="cards">
-        <% pokedex.forEach((pokemon)=> { %>
-        <a href="/details/<%= pokemon.id %> ">
-          <div class="card">
-            <p id="num">Nº: <%= pokemon.id %></p>
-            <img src="<%= pokemon.imagem %>" alt="" />
-            <h2><%= pokemon.nome %></h2>
-            <p id="desc"><%= pokemon.descricao %></p>
-            <p id="tipo">Tipo: <%= pokemon.tipo %></p>
-          </div>
-        </a>
-        <% }) %>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/img/icon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Pokedex</title>
+</head>
+
+<body>
+  <%- include("./partials/header.ejs") %>
+  <div class="space"></div>
+    <% if(message !="" ) { %>
+      <section id="message">
+        <p id="text">
+          <%= message %>
+        </p>
       </section>
-    </main>
-    <%- include("./partials/footer.ejs") %>
-    <%- include("./partials/modal.ejs") %>
-  </body>
+      <% } %>
+        <main>
+          <section class="cards">
+            <% pokedex.forEach((pokemon)=> { %>
+              <a href="/details/<%= pokemon.id %> ">
+                <div class="card">
+                  <p id="num">Nº: <%= pokemon.id %>
+                  </p>
+                  <img src="<%= pokemon.imagem %>" alt="" />
+                  <h2>
+                    <%= pokemon.nome %>
+                  </h2>
+                  <p id="desc">
+                    <%= pokemon.descricao %>
+                  </p>
+                  <p id="tipo">Tipo: <%= pokemon.tipo %>
+                  </p>
+                </div>
+              </a>
+              <% }) %>
+          </section>
+        </main>
+        <%- include("./partials/footer.ejs") %>
+          <script src="/js/closeModal.js"></script>
+</body>
+
 </html>

@@ -11,6 +11,8 @@ app.use(express.urlencoded());
 
 const port = process.env.PORT || 3000;
 
+let message = "";
+
 const pokedex = [
   {
     id: 1,
@@ -52,7 +54,10 @@ const pokedex = [
 
 // Rotas
 app.get("/", (req, res) => {
-  res.render("index", { pokedex });
+  setTimeout(() => {
+    message = "";
+  }, 1000);
+  res.render("index", { pokedex, message });
 });
 
 app.get("/register", (req, res) => {
@@ -76,6 +81,7 @@ app.post("/create", (req, res) => {
   const pokemon = req.body;
   pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
+  message = "Pokemon cadastrado com sucesso!";
   res.redirect("/");
 });
 
