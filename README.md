@@ -11,9 +11,13 @@ https://pokedex-greg.herokuapp.com/
 O projeto foi desenvolvido com as tecnologias:
 
 Javascript (Linguagem)
+
 Express
+
 Nodemon
+
 CSS
+
 HTML (ejs)
 
 
